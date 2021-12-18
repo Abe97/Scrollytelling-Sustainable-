@@ -1,3 +1,14 @@
+// preloading function
+
+//        PRELOADER
+//      $(window).load(function(){
+  $(document).ready(function(){
+    $("#preloader img").delay(2000).animate({opacity:0},function(){
+
+    $("#preloader").animate({top:-6000})
+        
+          })
+})
 
 
 

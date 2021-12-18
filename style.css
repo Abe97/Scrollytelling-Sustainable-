@@ -1,5 +1,7 @@
 @import url('satoshi.css');
 
+
+
 :root{
     --colore-text: #182126;
     --colore-bgc: #FEFEF3;
@@ -13,6 +15,33 @@ body{
     background-color: var(--colore-bgc);
     
 }
+
+/* preloader----------------- */
+#preloader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--colore-bgc);
+    z-index: 200;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#preloader img{
+    display: block;
+    width: 2.5%;
+}
+
+#loading{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    top:380px;
+}
+
+/* main styles---------------- */
 
 h1{
     font-size: 10rem;
@@ -263,8 +292,8 @@ html {
 
 /* <!-- quarta sezione--------------------------> */
 .s--4{
-    background: linear-gradient(rgb(255,255,255,0.4), rgb(0,0,0,0.9)), url("./images/architettura_per\ 83%_piccola\ e\ brutta.png");  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(rgb(255,255,255,0.4), rgb(0,0,0,0.6)), url("./images/architettura_per\ 83%_piccola\ e\ brutta.png"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(rgb(255,255,255,0.4), rgb(0,0,0,0.9)), url("./images/architettura-brutta.png");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgb(255,255,255,0.4), rgb(0,0,0,0.6)), url("./images/architettura-brutta.png"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-position: center center;
     background-size: cover;
     background-size: cover;
@@ -518,6 +547,11 @@ html {
   /* Inizio Media querie */
 
   @media screen and (max-width: 600px) {
+
+    #preloader img{
+        display: block;
+        width: 5%;
+    }
 
     body{
         overflow-x: hidden;
