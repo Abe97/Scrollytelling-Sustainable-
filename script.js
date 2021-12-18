@@ -2,14 +2,20 @@
 
 
 // blocco dello scroll horizontale----------------
-/*
-var scrollEventHandler = function()
-{
-  window.scroll(0, window.pageYOffset)
-}
 
-window.addEventListener("scroll", scrollEventHandler, false);
-*/
+$(function() {
+
+  var $body = $(document);
+  $body.bind('scroll', function() {
+     // "Disable" the horizontal scroll.
+     if ($body.scrollLeft() !== 0) {
+        $body.scrollLeft(0);
+     }
+  });
+
+});
+
+
 // REVEAL FUNCTION---------------------------------------------
 
 // usage:

@@ -518,6 +518,12 @@ html {
   /* Inizio Media querie */
 
   @media screen and (max-width: 600px) {
+
+    body{
+        overflow-x: hidden;
+        width: 100%;
+
+    }
     p{
         width: 100%;  
         text-align: center;
