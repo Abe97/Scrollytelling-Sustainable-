@@ -1,0 +1,156 @@
+
+/* magic images----------------------- */
+
+.image-paxerella{
+    position: absolute;
+    z-index:1;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+    filter: grayscale(15%);
+
+}
+
+
+.image-paxerella img{
+    width: 100%;
+    display: block;
+
+}
+
+.image-paxerella:hover {
+    -moz-transform: translate(-5px, -5px);
+    -ms-transform: translate(-5px, -5px);
+    -o-transform: translate(-5px, -5px);
+    -webkit-transform: translate(-5px, -5px);
+    transform: translate(-5px, -5px);
+    transition: all 0.5s ease-in;
+}
+
+.container-magic:hover{
+
+    -moz-transform: translate(10px, 10px);
+    -ms-transform: translate(10px, 10px);
+    -o-transform: translate(10px, 10px);
+    -webkit-transform: translate(10px, 10px);
+    transform: translate(10px, 10px);
+    transition: all 0.5s ease-in;
+}
+
+.container-magic{
+    width: 60%;
+    height: 30vh;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+.container-magic img{
+    width: 100%;
+}
+
+.borraccia{
+    position: absolute;
+    bottom: 50%;
+    right: 0%;
+    display: flex;
+    flex-direction: row;
+}
+.image-two {
+    bottom: 70%;   
+}
+
+
+.biglietti{
+    width: 40%;
+    height: 30vh;
+    /* position: absolute; */
+    bottom: 50%;
+    right: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.image-two img, .image-one img{
+    transform: rotate(-10deg);
+    width: 80%;
+    display: block;
+}
+ .image-one img{
+     transform: rotate(15deg);
+     right: 0;
+     bottom: 0;
+     width: 150%;
+ }
+
+ .image-two img{
+     right: 0;
+     transform: rotate(345deg);
+ }
+
+ .mask{
+     width: 35%;
+     position: absolute;
+     left: 0;
+     top: 40px;
+ }
+
+.franco-1, .franco-2, .franco-3{
+    width: 15%;
+}
+.franco-1{
+    top: 0;
+    position: absolute;
+    right:30%;
+    transform: rotate(355deg);
+}
+.franco-2{
+    top: 15%;
+    position: absolute;
+    right: 5%;
+}
+.franco-3{
+    top: 23%;
+    transform: rotate(340deg);
+
+}
+
+
+.pianta{
+    right: -15%;
+    width: 40%;
+    bottom: 0;
+
+}
+.pianta-sx{
+    width: 40%;
+    left: -20%;
+}
+.zimbawe{
+    width: 20%;
+    bottom: -60%;
+    left:20%;
+}
+.dollaro-mask{
+    width: 30%;
+    transform: rotate(13deg);
+    right: 5%;
+    top:2%;
+}
+.edimburgo{
+    width: 20%;
+    transform: rotate(37deg);
+    left: 0;
+}
+.immigration{
+    width: 35%;
+    left: 5%;
+    z-index: 4;
+    top: 30%;
+    transform: rotate(355deg);
+}
+.giris{
+    width: 35%;
+    right: 0%;
+    transform: rotate(16deg);
+    bottom: 20%;
+}

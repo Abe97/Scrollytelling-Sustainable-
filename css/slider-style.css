@@ -1,0 +1,118 @@
+html, body, section.horizontal {
+    overflow-x: hidden;
+  }
+
+  section.horizontal {
+    overflow-x: hidden;
+  }
+  
+  section.horizontal .pin-wrap,
+  section.horizontal .animation-wrap {
+      display: flex;
+      position: relative;
+      z-index: 1;  
+      /* height: 100vh; */
+  }
+  
+  
+  section.horizontal .item {
+      position: relative;
+      padding: 150px 20px;
+      flex: 0 0 500px;
+      height: calc(100vh - 300px);
+      display: flex;
+      align-items: center;
+      line-height: 1.7;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      /* border-right: 1px solid rgba(0, 0, 0, 0.06); */
+      background-color: transparent;
+  }
+
+  section.horizontal .item img{
+      width: 100%;
+  }
+  
+  section.horizontal .item:before {
+      position: absolute;
+      font-size: 100px;
+      opacity: .13;
+      font-weight: bold;    
+      z-index: -1;
+      -webkit-transform: translate(-30px, -50px);
+      transform: translate(-30px, -50px);
+      line-height: 1;
+      display: none;
+  }
+  
+  section.horizontal .animation-wrap.to-right {
+    counter-reset: item;
+    float: left;
+}
+
+section.horizontal .animation-wrap.to-right .item:before {
+    counter-increment: item;
+    content: counter(item);
+}
+
+section.horizontal .animation-wrap .item:nth-child(2n+2) {
+    /* align-items: flex-start; */
+    transform: rotate(5deg);
+}
+
+section.horizontal .animation-wrap .item:nth-child(4n+4) {
+    /* align-items: flex-end; */
+    transform: rotate(352deg);
+
+}
+
+
+section.horizontal .animation-wrap.to-left {
+    counter-reset: item 11;
+    float: right; 
+}
+
+section.horizontal .animation-wrap.to-left .item:before {
+    counter-increment: item -1;
+    content: counter(item);
+}
+
+/* DEFINISCI DEGLI STILI NIDIFICATI PER I 2 TIPI DI CAROSELLI  */
+
+section.horizontal .animation-wrap.to-left .ticket-carosello{
+    width: 80%;
+    /* transform: rotate(0deg); */
+}
+section.horizontal .ticket-wrap{
+    padding: 100px 30px;
+}
+
+section.horizontal .ticket-wrap .item img{
+    width: 80%;
+}
+
+.testo-carosello{
+    text-align: right;
+    position: relative;
+    width: 80%;
+}
+.testo-carosello p{
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-25%);
+    right:0;
+    text-align:left;
+    padding-right: 10%;
+}
+
+.testo-carosello p:nth-child(2){
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    bottom: 0px !important;
+
+}
