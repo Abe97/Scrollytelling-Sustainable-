@@ -28,6 +28,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 #preloader img{
     display: block;
@@ -64,7 +65,7 @@ h5{
    
     font-family: 'Satoshi-Regular';
     font-style: normal;
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 h6{
@@ -149,11 +150,11 @@ html {
     width: 480px; left:50%;
     pointer-events: none;
     z-index: 100;
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .pointer img {
-    width: 100px;
+    width: 75px;
     animation: rotation 4.5s infinite linear;
     transition: top 1s, left 1s;
     transition-timing-function: ease-out;
@@ -168,6 +169,26 @@ html {
       transform: rotate(359deg);
     }
   }
+
+  /* menu---------------- */
+  .board-menu{
+    width: 75%;
+    height:100%;
+    left:-100%;
+    top:0px;
+    z-index: 25;
+    position:fixed;
+    background-color: rgba(0,0,0,0.7);
+    filter: blur(35);
+    transition: 0.7s ease-in-out;
+}
+.open{
+    left:0px;
+
+}
+#button{
+    cursor: pointer;
+}
 
 /* <!-- prima sezione------------------> */
 .s--1{
@@ -328,7 +349,7 @@ html {
     margin-left: auto;
     padding-left: 10%;
     padding-right: 10%;
-    gap:200px;
+    /* gap:200px; */
     background-color: var(--colore-text);
     color: var(--colore-bgc);
 }
@@ -337,6 +358,7 @@ html {
      font-size: 20rem;
      text-align: center;
      width: 200%;
+
 
  }
 
@@ -360,6 +382,7 @@ html {
 }
 .dat-el{
     width: 100%;
+
 
 }
 
@@ -420,6 +443,7 @@ html {
     flex-direction: row;
     align-items: start;
     width: 75%;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -434,25 +458,66 @@ html {
 }
 
 /* nona sezione------------------------- */
+.s--9{
+    background-color: var(--colore-text);
+    color: var(--colore-bgc);
+    font-size: 2rem;
+    line-height: 2.25rem;
+    width: 100%;
+    height: 150vh;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.titolo-dati{
+    font-size: 3rem;
+    text-align: center;
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    line-height: 3.25rem;
+}
 
-/* sezione rifatta----------------- */
+.dati-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 150px;
+}
 
+.dat-item  {
+    width: 33.3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
+.dat-item p{
+    font-size: 1rem;
+    line-height: 1.25rem;
+    width: 100%;
+    text-align: left;
+
+}
 /* decima lezione----------------------------  */
 .s--10{
     height: 100vh;
     display: flex;
-    width: 100%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
 
+}
+.s--10 .titolo-dati{
+    top: 20px;
 }
 
 .s--10 ul{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 100px;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -537,7 +602,7 @@ html {
 
   #credits{
         font-size: 0.5rem;
-        height: 1.5rem;
+        height: 20px;
         width: 100%;
         text-align: center;
         position:sticky;
@@ -556,6 +621,7 @@ html {
     body{
         overflow-x: hidden;
         width: 100%;
+        font-size: 10px;
 
     }
     p{
@@ -627,6 +693,7 @@ html {
     }
     .mobile-f{
         font-size: 4rem;
+        top: 100px;
     }
     .campione{
         width: 55%;
@@ -648,12 +715,12 @@ html {
         margin-left: auto;
         text-align: left;
         position: static;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
     .percentage h1{
         font-size: 6rem;
-        text-align-last: left;
+        text-align: left;
     }
 
     /* quarta sezione------------------- */
@@ -688,14 +755,14 @@ html {
         
     }
 
-    .main{
+    .main, .main-2{
         flex-direction: column;
         gap: 20px;
         width: 90%;
         align-items: start;
     }
 
-    .main p{
+    .main p, .main-2 p{
         width:85% !important;
     }
 
@@ -756,6 +823,34 @@ html {
         padding-left: 5%;
     }
 
+    /* .nona sezione _------------------ */
+
+    .s--9{
+        margin-left: 0px;
+        height: 280vh;
+        padding-left: auto;
+        padding-right: auto;
+    }
+    .titolo-dati{
+        font-size: 1.75rem;
+        line-height: 2rem;
+        text-align: left;
+        top: 35px;
+    }
+    .dati-container{
+        flex-direction: column;
+
+    }
+    .dat-item{
+        width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .dat-item h1{
+        font-size: 6rem;
+    }
 
     /* nona sezione mobile-------------- */
   
@@ -769,9 +864,31 @@ html {
         padding-top:60px;
     }
 
-    .list--section, .s--10{
-        display: none;
+    /* decima sezione */
+
+    .s--10{
+        font-size: 1rem;
+        width: 100%;
+        margin-left: 0px;
+        padding-left: auto;
+        padding-right: auto;
+        height: 120vh;
     }
+    h5{
+        font-size: 6rem;
+        
+     }
+     .dato-info{
+         font-size: 1rem;
+        line-height: 1.25rem;
+        padding-top: 20px;
+    }
+    .s--10 h6{
+         font-size: 8rem;
+         left: 0.25rem;
+         display: none;
+     }
+   
 
 
     /* resize e repositioning delle immagini */

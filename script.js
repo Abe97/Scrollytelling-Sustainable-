@@ -1,14 +1,13 @@
 // preloading function
 
 //        PRELOADER
-//      $(window).load(function(){
-  $(document).ready(function(){
-    $("#preloader img").delay(2000).animate({opacity:0},function(){
+//   $(document).ready(function(){
+//     $("#preloader img").delay(2000).animate({opacity:0},function(){
 
-    $("#preloader").animate({top:-6000})
+//     $("#preloader").animate({top:-6000})
         
-          })
-})
+//           })
+// })
 
 
 
@@ -124,10 +123,10 @@ document.addEventListener("DOMContentLoaded", function() {
 // Parallax------------------------------------
 
 gsap.to(".pContent", {
-  yPercent: -100,
+  yPercent: -40,                                        //-100
   ease: "none",
   scrollTrigger: {
-    trigger: ".pSection",
+    trigger: ".section",                                //.pSection
     // start: "top bottom", // the default values
     // end: "bottom top",
     scrub: true
@@ -135,14 +134,36 @@ gsap.to(".pContent", {
 });
 
 gsap.to(".pImage", {
-  yPercent: 50,
+  yPercent: 70,                                         //50
   ease: "none",
   scrollTrigger: {
-    trigger: ".pSection",
+    trigger: ".section",                               //.pSection
     // start: "top bottom", // the default values
     // end: "bottom top",
     scrub: true
   }, 
+});
+
+gsap.to(".image-paxerella", {
+  backgroundPosition: "50% 100%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".section",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+gsap.to(".franco-2 ", {
+  backgroundPosition: "100% 65%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".franco-2",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: 0.5
+  }
 });
 
 // scroll indicator-----------------------
@@ -160,4 +181,34 @@ function myFunction() {
 $(document).mousemove(function (e) {
   $(".pointer").css({ left: e.pageX, top: e.pageY });
 });
+
+// menu apertura e chiusura ----------------------
+
+  
+$("#button").click(function(){
+  console.log('si si clickka');
+         
+ $('.board-menu').toggleClass('open');
+ 
+ 
+});
+
+//    FUNZIONE CHIUSURA IN SCROLLING
+    
+$(document).scroll(function(){
+  $('.board-menu').removeClass('open');  
+  
+})
+
+// FUNZIONE CHIUSRA CLICK SU AREA
+
+$(".board-menu").click(function(){
+  console.log('si si clickka');
+         
+ $('.board-menu').toggleClass('open');
+ 
+ 
+});
+
+
 
