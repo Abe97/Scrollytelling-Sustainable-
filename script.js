@@ -1,13 +1,13 @@
 // preloading function
 
 //        PRELOADER
-//   $(document).ready(function(){
-//     $("#preloader img").delay(2000).animate({opacity:0},function(){
+  $(document).ready(function(){
+    $("#preloader img").delay(2000).animate({opacity:0},function(){
 
-//     $("#preloader").animate({top:-6000})
+    $("#preloader").animate({top:-6000})
         
-//           })
-// })
+          })
+})
 
 
 
@@ -209,6 +209,18 @@ $(".board-menu").click(function(){
  
  
 });
+
+// menu scrolling function-----------------
+
+    // UP UpButton
+    
+    
+    $('#fondo').click(function(){
+        $.scrollTo('footer',1000);
+
+    })
+
+    
 
 
 
