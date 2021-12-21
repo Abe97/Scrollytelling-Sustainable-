@@ -185,13 +185,13 @@ $(document).mousemove(function (e) {
 // menu apertura e chiusura ----------------------
 
   
-$("#button").click(function(){
-  console.log('si si clickka');
+// $("#button").click(function(){
+//   console.log('si si clickka');
          
- $('.board-menu').toggleClass('open');
+//  $('.board-menu').toggleClass('open');
  
  
-});
+// });
 
 //    FUNZIONE CHIUSURA IN SCROLLING
     

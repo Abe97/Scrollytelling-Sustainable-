@@ -43,6 +43,7 @@ body{
 
 /* main styles---------------- */
 
+
 h1{
     font-size: 10rem;
 
@@ -74,6 +75,67 @@ h6{
     
 
 }
+
+/* titolo sezioni------------_ */
+.section-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    /* width: 60%; */
+    color: var(--colore-text);
+    left: 0;
+    top: 0;
+    z-index: 5;
+    padding-top:15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    text-transform: uppercase;
+
+}
+
+#post-pandemia{
+    left: 0;
+    top: 0;
+}
+
+#vitale{
+    top: 50%;
+}
+
+.in-card{
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 40px;
+    display: block;
+    padding-top:15px;
+    padding-bottom: 15px;
+    color: var(--colore-text);
+    text-transform: uppercase;
+}
+#culturale{
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+}
+#host{
+    color: var(--colore-bgc);
+    left:50%;
+    transform: translate(-50%);
+    text-align: center;
+    padding-bottom: 50px;
+    width: 70%;
+}
+#difficile{
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+}
+#precauzioni{
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+/* chiiusa sezioni------------------ */
 .nav--item{
     font-size: 1rem;
 }
@@ -89,6 +151,7 @@ p{
     text-align: right;
     padding-right: 20px;
     color:var(--colore-text);
+    visibility: hidden;
 }
 
 img {
@@ -195,7 +258,15 @@ html {
 /* <!-- prima sezione------------------> */
 .s--1{
     gap:170px;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
+}
+.s--1 .abstract{
+
+    position: absolute;
+    width: 50%;
+    text-align: left;
+    left: 11.5%;
+    bottom:100%
 }
 
 #intro--title{
@@ -204,12 +275,12 @@ html {
     /* margin-right: %; */
     margin-left: 0%;
     padding-top: 10%;
-    line-height: 12rem;
+    line-height: 14rem;
     font-size: 16rem;
     left: 0;
 }
 #intro--title span{
-    line-height: 12rem;
+    line-height: 13rem;
     font-size: 14rem;
   color: var(--colore-text);
   /* font-style: italic; */
@@ -222,12 +293,30 @@ html {
     gap:0px;
     position: static;
     z-index: 20;
+    height: 200px;
 }
 
-.abstract{
+.s--1 .abstract{
 
-    width: 60%;
+    position: absolute;
+    width: 50%;
     text-align: left;
+    left: 11.5%;
+    bottom:100%
+}
+.s--1 .arrow{
+    position: absolute;
+    bottom:75%;
+}
+
+.s--mask{
+    height: 100vh;
+    margin-bottom: 100px
+    
+}
+.singolo-container{
+    position: absolute;
+    top: 5%;
 }
 /* <!-- seconda sezione-----------------------> */
 
@@ -266,6 +355,11 @@ html {
     text-align: left;
 }
 
+.abstract{
+    width: 60%;
+    text-align: left;
+}
+
 
 /* <!-- terza sezione-----------------------> */
 
@@ -298,6 +392,12 @@ html {
     text-align: left;
     width: 100%;
     padding-left: 3%;
+}
+
+.percentage p b{
+    font-size:2rem;
+    line-height: 1.75rem;
+    font-weight: bold;
 }
 
 #prima{
@@ -354,8 +454,8 @@ html {
     height: 100vh;
 }
 
-#seconda{
-
+#seconda-not{
+    right: 10%;
     bottom: 20%;
 }
 
@@ -377,7 +477,7 @@ html {
      font-size: 20rem;
      text-align: center;
      width: 200%;
-     margin-top: 50px;
+     margin-top: 150px;
 
  }
 
@@ -487,6 +587,7 @@ html {
 .main-vert{
     flex-direction: column;
     gap:400px;
+    margin-top: 100px;
 }
 
 /* nona sezione------------------------- */
@@ -545,9 +646,6 @@ html {
     margin-left: auto;
     margin-right: auto;
 
-}
-.s--10 .titolo-dati{
-    /* top: 20px; */
 }
 
 .s--10 ul{
@@ -744,10 +842,26 @@ html {
         z-index: 30;
     }
     .borraccia{
-        width: 50%;
-        right: 20%;
+        width: 80%;
+        right: -25%;
     }
 
+.s--1 .abstract{
+
+    position: absolute;
+    width: 50%;
+    text-align: left;
+    left: 11.5%;
+    bottom:10%
+}
+.s--1 .arrow{
+    position: absolute;
+    bottom:-5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+    
     /* seconda sezione------------ */
     .viaggiatori--numero{
         font-size: 5.5rem;
@@ -846,7 +960,7 @@ html {
         margin-left: 5%;
         width: 90%;
         padding-left: 5%;
-        height: 400vh;
+        height: 470vh;
         display: block;
         margin-bottom: 30px;
 
@@ -866,6 +980,7 @@ html {
     }
     #purpose-travel{
         font-size: 3rem;
+        line-height: 3.25rem;
     }
 
     .testo-carosello p{
@@ -950,13 +1065,17 @@ html {
 
     .s--10{
         font-size: 1rem;
-        width: 100%;
+        width: 90%;
         margin-left: 0px;
         padding-left: auto;
         padding-right: auto;
+        margin-left: auto;
+        margin-right: auto;
         height: 80vh;
-        padding-top: 200px;
+        padding-top: 300px;
         margin-bottom: 100px;
+
+
     }
     h5{
         font-size: 6rem;
@@ -968,8 +1087,7 @@ html {
         padding-top: 20px;
         
     }
-    .s--10 ul{
-    }
+  
     .s--10 ul li{
         display: flex;
         flex-direction: column;
@@ -998,7 +1116,7 @@ html {
 
     }
     footer h4{
-        width: 60%; 
+        width: 80%; 
         font-size: 1rem;   
     }
     footer h3{
@@ -1033,11 +1151,24 @@ html {
         width: 60%;
     }
     .dollaro-mask{
-        width: 70%;
+        width: 50%;
     }
     .franco-1, .franco-2, .franco-3{
-        width: 25%;
+        width: 30%;
     }
+    .franco-1{
+        right: 5%;
+
+    }
+    .franco-2{
+        top: 25%;
+    }
+    .franco-3{
+        top: 45%;
+        right: 5%;
+
+    }
+
     .edimburgo{
         width: 50%;
     }
@@ -1048,7 +1179,7 @@ html {
     .giris{
         width: 90%;
         right: -50%;
-        bottom: 10%;
+        bottom: 20%;
     }
     .china{
         width: 70%;
@@ -1073,6 +1204,43 @@ html {
         bottom: -8%;
         left: 10%;
     }
+
+.postcard{
+    width: 100%;
+    bottom: -3;
+
+}
+.rosa-venti{
+    width: 70%;
+    bottom: 60%;
+    display: none;
+}
+.bassa-plant{
+    width: 50%;
+    z-index: 1;
+    left: 50%;
+}
+.bella-plant{
+    display: none;
+}
+.r-plant{
+    width: 50%;
+}
+
+/* sezioni titoli-------------- */
+
+.section-title{
+    border: solid 1px red;
+    font-size: 1.75rem;
+    font-weight: bold;
+    width: 100%;
+    color: var(--colore-text);
+    left: 0;
+    top: 0;
+    margin-bottom: 50px;
+    display: none;
+}
+
     /* chiusura della media querie */
 
 }
