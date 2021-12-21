@@ -4,6 +4,7 @@ html, body, section.horizontal {
 
   section.horizontal {
     overflow-x: hidden;
+    position: relative;
   }
   
   section.horizontal .pin-wrap,

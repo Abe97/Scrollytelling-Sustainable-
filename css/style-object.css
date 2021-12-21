@@ -4,27 +4,38 @@
 .image-paxerella{
     position: absolute;
     z-index:1;
-    -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
-    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,1));
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,1));
+    filter: grayscale(15%);
+
+}
+.image-paxerella-no-ombra{
+    position: absolute;
+    z-index:1;
     filter: grayscale(15%);
 
 }
 
+.image-paxerella-no-ombra img{
+    width: 100%;
+    display: block;
+}
 
 .image-paxerella img{
     width: 100%;
     display: block;
+    filter: drop-shadow(5px 5px 5px #999);
 
 }
 
-.image-paxerella:hover {
+/* .image-paxerella:hover {
     -moz-transform: translate(-5px, -5px);
     -ms-transform: translate(-5px, -5px);
     -o-transform: translate(-5px, -5px);
     -webkit-transform: translate(-5px, -5px);
     transform: translate(-5px, -5px);
-    transition: all 0.5s ease-in;
-}
+    transition: all 0.3s ease-in;
+} */
 
 .container-magic:hover{
 
@@ -53,6 +64,7 @@
     right: 0%;
     display: flex;
     flex-direction: row;
+    width: 50%;
 }
 .image-two {
     bottom: 70%;   
@@ -79,23 +91,20 @@
      transform: rotate(15deg);
      right: 0;
      bottom: 0;
-     width: 150%;
+     width: 100%;
  }
 
- .image-two img{
-     right: 0;
-     transform: rotate(345deg);
- }
 
  .mask{
-     width: 35%;
+     width: 50%;
      position: absolute;
-     left: 0;
+     left: -8%;
      top: 40px;
  }
 
 .franco-1, .franco-2, .franco-3{
     width: 15%;
+    z-index: 100;
 }
 .franco-1{
     top: 0;
@@ -137,8 +146,8 @@
     top:2%;
 }
 .edimburgo{
-    width: 20%;
-    transform: rotate(37deg);
+    width: 15%;
+    transform: rotate(20deg);
     left: 0;
 }
 .immigration{
@@ -154,3 +163,62 @@
     transform: rotate(16deg);
     bottom: 20%;
 }
+
+.cartolina-sopra{
+    width: 60%;
+    left: -1%;
+    bottom: 0%;
+
+}
+.cartolina-sotto{
+    width: 60%;
+    left: 0%;
+    bottom: 10%;
+}
+.china{
+    width: 30%;
+    top: 7%;
+    right: 0;
+}
+.zimbaue2{
+    width: 15%;
+    top: 25%;
+    left: 42%;
+
+}
+.postcard{
+    width: 40%;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%) rotate(12deg);
+}
+.rosa-venti{
+    width: 60%;
+    right: 0%;
+    bottom: 20%;
+}
+.bussola{
+    width: 20%;
+    right: 0%;
+    bottom: 35%;
+    transform: rotate(12.5deg);
+}
+
+.bassa-plant{
+    width: 25%;
+    bottom: 0%;
+    left: 0;
+}
+
+.r-plant{
+    width: 25%;
+    right: -2%;
+    top: 20%;
+}
+.bella-plant{
+    width: 20%;
+    right: 15%;
+    bottom: 0%;
+    transform: scaleX(-1);
+}
+
